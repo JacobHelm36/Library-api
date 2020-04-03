@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using books.Services;
 using library_api.Models;
+using Microsoft.AspNetCore.Authorization;
 // using library_api.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -47,6 +48,7 @@ namespace books.Controllers
 
 
         [HttpPost]
+        [Authorize]
         public ActionResult<Bookers> Create([FromBody] Bookers newBook)
         {
             try
@@ -60,6 +62,7 @@ namespace books.Controllers
         }
 
         [HttpPut("{id}")]
+        [Authorize]
         public ActionResult<Bookers> Edit(int id, [FromBody] Bookers updatedBook)
         {
             try
@@ -74,6 +77,7 @@ namespace books.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize]
         public ActionResult<string> Delete(int id)
         {
             try

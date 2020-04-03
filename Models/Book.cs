@@ -11,4 +11,12 @@ namespace library_api.Models
         public bool IsAvailable { get; set; }
         public int lbId { get; set; }
     }
+
+
+    public class BookAuthors
+    {
+        public int Id {get; set; }
+        public int BkId { get; set; }
+        public int AtId { get; set; }
+    }
 }

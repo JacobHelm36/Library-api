@@ -7,6 +7,8 @@ using books.Repositories;
 using books.Services;
 using library.Repositories;
 using library.Services;
+using library_api.Repository;
+using library_api.Services;
 // using library_api.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 // using library_api.Services;
@@ -67,6 +69,8 @@ namespace library_api
             services.AddTransient<BooksRepository>();
             services.AddTransient<LibraryService>();
             services.AddTransient<LibraryRepository>();
+            services.AddTransient<AuthorsService>();
+            services.AddTransient<AuthorsRepository>();
 
         }
 
